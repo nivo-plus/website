@@ -1,0 +1,51 @@
+  <!-- Testimonials Section -->
+    <section class="container-flex gradient-light">
+        <header class="section__header">
+            <div class="section__badge">Testimoniales</div>
+            <h1 class="section__title">Qué dicen nuestros usuarios</h1>
+            <p class="section__description">Mira lo que nuestros clientes dicen sobre cómo NIVO+ ha transformado su flujo de trabajo.</p>
+        </header>   
+
+        <!-- mini-cards  -->
+        <button class="carousel-nav prev fa fa-chevron-left" onclick="moveCarousel(-1)"></button>
+        <div class="carousel">
+            <div class="carousel-wrapper" id="carouselWrapper">
+                <!-- Card 1 -->
+                <div class="card--quote">
+                    <img src="https://randomuser.me/api/portraits/men/78.jpg" class="testimonial-avatar">
+                    <p class="testimonial-quote">
+                        "NIVO+ ha transformado nuestra práctica anestesiológica. Ahora podemos registrar todos los datos necesarios sin comprometer nuestra atención al paciente. La generación automática de informes nos ahorra horas cada día."
+                    </p>
+                    <h4 class="testimonial-author">Nombre y Apellido</h4>
+                    <p class="testimonial-role">Rol - Institución - Mat.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card--quote active">
+                    <img src="https://randomuser.me/api/portraits/men/78.jpg" class="testimonial-avatar">
+                    <p class="testimonial-quote">
+                        "La capacidad de registrar más de 60 datos por hora en tiempo real mientras atiendo al paciente ha sido revolucionaria. Los informes generados cumplen con todos los requisitos legales y son mucho más completos."
+                    </p>
+                    <h4 class="testimonial-author">Nombre y Apellido</h4>
+                    <p class="testimonial-role">Rol - Institución - Mat.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card--quote">
+                    <img src="https://randomuser.me/api/portraits/men/78.jpg" class="testimonial-avatar">
+                    <p class="testimonial-quote">
+                        "La interfaz móvil de NIVO+ me permite alternar entre dispositivos sin perder información. Los discursos automáticos para técnicas anestésicas han reducido nuestro tiempo de documentación en un 40%."
+                    </p>
+                    <h4 class="testimonial-author">Nombre y Apellido</h4>
+                    <p class="testimonial-role">Rol - Institución - Mat.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-nav next fa fa-chevron-right" onclick="moveCarousel(1)"></button>
+
+        <div class="testimonials-dots" id="dotsContainer">
+            <span class="dot" onclick="goToCard(0)"></span>
+            <span class="dot active" onclick="goToCard(1)"></span>
+            <span class="dot" onclick="goToCard(2)"></span>
+        </div>
+    </section>

@@ -1,0 +1,36 @@
+<!-- Noticias -->
+<section id="noticias" class="wrapper style5">
+        <div class="inner">
+            <header class="major">
+                    <span class="volanta">información</span><br>
+                    <h2>Testimoniales</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a odio neque. Quisque vehicula urna massa, id accumsan dui vulputate.</p>
+            </header>
+            <div class="row uniform align-center">
+                {% for post in site.posts limit:3 %}
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <p class="fecha">{{ post.date | date: "%d.%m.%Y" }}</p>																												                        
+                    <a href="{{ post.url }}"><h4 class="titulo">{{ post.title }}</h4></a>
+                    <div class="image">
+                        {% if post.featured %}
+                            <img src="{{ site.baseurl }}/images/posts/{{ post.featured }}" title="{{post.title}}" width="100%" class="featured img-responsive" />
+                        {% endif %}                   
+                    </div>
+                        <p class="contenido">{{ post.excerpt}}</p>
+                    <a href="{{ post.url }}" class="button violeta fit">Leer más</a>
+                    <ul class="icons">
+                        <li class="special">
+                            <a href="http://www.facebook.com/sharer/sharer.php?u=https://www.andes.gob.ar{{ post.url }}" target="blank" class="icon fa-facebook"></a>
+                        </li>
+                        <li class="special">
+                            <a href="http://twitter.com/share?url=<{{ post.url }}>&text={{ post.title }} por @andesneuquen" target="blank" class="icon fa-twitter"></a>
+                        </li>
+                        <li class="special">
+                            <a href="https://plus.google.com/share?url={{ post.url }}&text={{ post.title }}" target="blank" class="icon fa-google-plus"></a>
+                        </li>
+                    </ul>
+                </div>
+                {% endfor %}														                        
+            </div>
+        </div>
+</section>

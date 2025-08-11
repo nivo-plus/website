@@ -1,0 +1,70 @@
+<div id="" class="container-grid">
+    <!-- Main Content Section -->
+    <div class="main__content">
+        <div class="section__badge">La Solución</div>
+        <h1 class="section__title">Evaluación Pre anestésica</h1>
+        <p class="section__description">
+            NIVO+ cubre todo el proceso anestésico, desde la evaluación inicial hasta el alta del paciente.
+        </p>
+        
+        <div class="slider-container">
+            <img class="image-slide active" src="./assets/img/nv_screen-01.jpg" alt="Evaluación Pre anestésica">
+            <img class="image-slide" src="./assets/img/nv_screen-02.png" alt="Protocolo anestésico">
+            <img class="image-slide" src="./assets/img/nv_screen-03.jpg" alt="Recuperación postanestésica">
+                <i class="carousel-nav prev fa fa-chevron-left" onclick="changeSlide(-1)"></i>
+                <i class="carousel-nav next fa fa-chevron-right" onclick="changeSlide(1)"></i>
+        </div>
+        
+        <!-- Navigation Dots -->
+        <div class="fake-radio">
+            <label class="radio-btn active" onclick="goToSlide(0)"></label>
+            <label class="radio-btn" onclick="goToSlide(1)"></label>
+            <label class="radio-btn" onclick="goToSlide(2)"></label>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <header class="sidebar__header">
+            <h2 class="sidebar__title">Solución integral</h2>
+        </header>
+        <section class="sidebar__stepper">
+            <div class="sidebar__step active" onclick="goToSlide(0)">
+                <div class="step__bullet fa fa-check"></div>
+                <div class="step-content">
+                    <div class="step__prefix">PASO 1</div>
+                    <div class="step__title">Evaluación Pre anestésica</div>
+                    <p class="step__description">Registro de antecedentes alérgicos, clínicos y quirúrgicos, examen físico, de vía aérea y evaluación de riesgo.</p>
+                </div>
+            </div>
+            
+            <div class="sidebar__step" onclick="goToSlide(1)">
+                <div class="step__bullet fa fa-check"></div>
+                <div class="step-content">
+                    <div class="step__prefix">PASO 2</div>
+                    <div class="step__title">Protocolo anestésico</div>
+                    <p class="step__description">Documentación de condiciones de ingreso, monitoreo utilizado, técnicas anestésicas e invasivas, ventilación, fármacos y condiciones de egreso.</p>
+                </div>
+            </div>
+            
+            <div class="sidebar__step" onclick="goToSlide(2)">
+                <div class="step__bullet fa fa-check"></div>
+                <div class="step-content">
+                    <div class="step__prefix">PASO 3</div>
+                    <div class="step__title">Recuperación postanestésica</div>
+                    <p class="step__description">Registro de signos vitales en recuperación, evaluación del dolor, complicaciones y condiciones de egreso del paciente.</p>
+                </div>
+            </div>
+            
+            <div class="sidebar__step" onclick="goToSlide(3)">
+                <div class="step__bullet fa fa-plus"></div>
+                <div class="step-content">
+                    <div class="step__prefix">ADICIONALES</div>
+                    <div class="step__title">Medicación e informes</div>
+                    <p class="step__description">Registro de medicación sistémica antálgica y generación de informes de ecografía transesofágica con datos cardiovasculares clave.</p>
+                </div>
+            </div>
+        </section>
+        <!-- <button class="btn__primary">Solicitar demo</button> -->
+    </aside>
+</div>

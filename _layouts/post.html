@@ -1,0 +1,36 @@
+---
+layout: post
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include meta.html %}
+  </head>
+	<body>
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+        {% if page.featured %}
+            <img class="bg-image" src="{{ site.baseurl }}/images/posts/{{page.featured}}">
+        {% endif %}                   
+        
+        <!-- Main -->
+            <article id="main">
+                <header>
+                    <p class="fecha">{{ page.date | date: "%d.%m.%Y" }}</p>                
+                    <h2 class="t-blanca">{{ page.title }}</h2>
+                    <p>{{ page.excerpt }}</p>
+                </header>
+                <section class="wrapper nota style5 ">
+                    <div class="inner">
+                        <p>{{ page.content }}</p>
+                    </div>
+                </section>
+            </article>
+
+        <!-- Footer -->
+        {% include footer.html %}    
+        </div>
+	</body>
+</html>
