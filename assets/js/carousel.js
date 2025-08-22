@@ -1,17 +1,15 @@
- let currentCard = 1; // Start with second card active
+        let currentCard = 1
         const totalCards = 3;
         const wrapper = document.getElementById('carouselWrapper');
-        const dots = document.querySelectorAll('.bullet');
+        const dots = document.querySelectorAll('.dot');
         const cards = document.querySelectorAll('.card--quote');
 
-        // Touch/scroll handling
         let isDown = false;
         let startX;
         let scrollLeft;
         let startTime;
         let moved = false;
 
-        // Click on card to activate
         cards.forEach((card, index) => {
             card.addEventListener('click', (e) => {
                 if (!moved) {
@@ -40,12 +38,12 @@
             const timeDiff = endTime - startTime;
             const distance = Math.abs(wrapper.scrollLeft - scrollLeft);
             
-            // If quick swipe, move to next/prev slide
+    
             if (timeDiff < 300 && distance > 50) {
                 const direction = wrapper.scrollLeft > scrollLeft ? 1 : -1;
                 moveCarousel(direction);
             } else {
-                // Snap to closest slide
+        
                 snapToClosest();
             }
         });
@@ -59,7 +57,7 @@
             wrapper.scrollLeft = scrollLeft - walk;
         });
 
-        // Touch events for mobile
+
         wrapper.addEventListener('touchstart', (e) => {
             startX = e.touches[0].pageX;
             scrollLeft = wrapper.scrollLeft;
@@ -93,17 +91,17 @@
         });
 
         function updateCarousel() {
-            const cardWidth = 320 + 20; // card width + gap
+            const cardWidth = 320 + 20
             const targetScroll = currentCard * cardWidth;
             
             wrapper.style.transform = `translateX(-${targetScroll}px)`;
             
-            // Update active states
+    
             cards.forEach((card, index) => {
                 card.classList.toggle('active', index === currentCard);
             });
             
-            // Update dots
+    
             dots.forEach((bullet, index) => {
                 bullet.classList.toggle('active', index === currentCard);
             });
@@ -135,21 +133,12 @@
             updateCarousel();
         }
 
-        // Auto-play functionality removed
-
-        // Pause auto-play on hover (removed)
-        // wrapper.addEventListener('mouseenter', stopAutoPlay);
-        // wrapper.addEventListener('mouseleave', startAutoPlay);
-
-        // Handle window resize
         window.addEventListener('resize', () => {
             updateCarousel();
         });
 
-        // Initialize
         updateCarousel();
 
-        // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') {
                 moveCarousel(-1);

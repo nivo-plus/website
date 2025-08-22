@@ -56,7 +56,7 @@ body {
     .nav-menu {
         display: flex;
         width: min-content;
-        font-size: 14px;
+        font-size: 13px;
         text-transform: uppercase;
         align-items: center;
         gap: 60px;
@@ -73,7 +73,7 @@ body {
     }
 
     .nav-link:hover {
-        color: var(--primary);
+        color: var(--secondary);
     }
 
     .btn__secondary--outline {
@@ -259,7 +259,7 @@ html {
 .btn__secondary--outline { 
     --btnBackgorund: transparent;
     --btnColor: var(--secondary);
-    --btnFontSize: 14px;
+    --btnFontSize: 12px;
 
     @extend %baseBtn;
 
@@ -297,6 +297,30 @@ html {
     
     &:hover {
         background-color: rgba(255, 255, 255, 0.25);
+    }
+}
+
+.btn__tertiary {
+    --btnBackgorund: transparent;
+    --btnColor: var(--primaryLight);
+    --btnFontSize: var(--descriptionSize);
+
+    @extend %baseBtn;
+    border: none!important;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-transform: lowercase!important;
+    
+    &:hover {
+        --btnColor: var(--secondary);
+    }
+
+}
+
+.section__description {
+    a {
+        display: contents!important;
     }
 }
 
@@ -709,7 +733,6 @@ html {
         display: flex;
         flex-wrap: wrap;
         height: 100vh;
-        // height: calc(100vh - var(--headerHeight));
     }
 
     .main__content {
@@ -810,6 +833,10 @@ html {
         &:last-child {
             border-bottom: none!important;
         }
+
+        .step__description {
+            display: none;
+        }
     }
 
     .sidebar__step:hover, .sidebar__step.active {
@@ -863,12 +890,6 @@ html {
 
     .sidebar__step.active .step__title {
         color: var(--primary);
-    }
-
-    .step__description {
-        font-size: 12px;
-        color: var(--neutral);
-        line-height: 1.4;
     }
 
     .fading {
@@ -1053,10 +1074,6 @@ footer {
     .container-grid {
         height: 100%;
         flex-direction: column;
-
-        .step__description {
-            display: none;
-        }
     }
     
     .main__content,
@@ -1269,7 +1286,7 @@ footer {
         transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
     }
 
-    .splash.hidden {
+    .hidden {
         opacity: 0;
         visibility: hidden;
     }

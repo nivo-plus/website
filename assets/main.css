@@ -55,7 +55,7 @@ body {
 .nav-menu {
   display: flex;
   width: min-content;
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
   align-items: center;
   gap: 60px;
@@ -72,7 +72,7 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .btn__secondary--outline {
@@ -233,7 +233,7 @@ html {
   flex: 1;
 }
 
-.btn__secondary, .btn__primary, .btn__secondary--outline {
+.btn__tertiary, .btn__secondary, .btn__primary, .btn__secondary--outline {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -252,7 +252,7 @@ html {
 .btn__secondary--outline {
   --btnBackgorund: transparent;
   --btnColor: var(--secondary);
-  --btnFontSize: 14px;
+  --btnFontSize: 12px;
 }
 .btn__secondary--outline:hover {
   --btnColor: var(--primary);
@@ -282,6 +282,24 @@ html {
 }
 .btn__secondary:hover {
   background-color: rgba(255, 255, 255, 0.25);
+}
+
+.btn__tertiary {
+  --btnBackgorund: transparent;
+  --btnColor: var(--primaryLight);
+  --btnFontSize: var(--descriptionSize);
+  border: none !important;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-transform: lowercase !important;
+}
+.btn__tertiary:hover {
+  --btnColor: var(--secondary);
+}
+
+.section__description a {
+  display: contents !important;
 }
 
 .hero__note {
@@ -767,6 +785,9 @@ html {
 .sidebar__step:last-child {
   border-bottom: none !important;
 }
+.sidebar__step .step__description {
+  display: none;
+}
 
 .sidebar__step:hover, .sidebar__step.active {
   background-color: var(--success);
@@ -819,12 +840,6 @@ html {
 
 .sidebar__step.active .step__title {
   color: var(--primary);
-}
-
-.step__description {
-  font-size: 12px;
-  color: var(--neutral);
-  line-height: 1.4;
 }
 
 .fading {
@@ -983,9 +998,6 @@ footer.container-flex .section__description {
   .container-grid {
     height: 100%;
     flex-direction: column;
-  }
-  .container-grid .step__description {
-    display: none;
   }
   .main__content,
   .sidebar {
@@ -1151,7 +1163,7 @@ footer.container-flex .section__description {
   transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
 }
 
-.splash.hidden {
+.hidden {
   opacity: 0;
   visibility: hidden;
 }

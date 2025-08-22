@@ -1,12 +1,15 @@
-    let currentSlideIndex = 0;
+let currentSlideIndex = 0;
         const slides = document.querySelectorAll('.image-slide');
         const btns = document.querySelectorAll('.radio-btn');
         const steps = document.querySelectorAll('.sidebar__step');
         const bullets = document.querySelectorAll('.step__bullet');
         const totalSlides = slides.length;
+        
+        const mainTitle = document.getElementById('main-title');
+        const mainDescription = document.getElementById('main-description');
 
         function updateSlider() {
-            // Update slides
+
             slides.forEach((slide, index) => {
                 slide.classList.toggle('active', index === currentSlideIndex);
                 if (index === currentSlideIndex) {
@@ -15,20 +18,35 @@
                 }
             });
 
-            // Update btns
             btns.forEach((btn, index) => {
                 btn.classList.toggle('active', index === currentSlideIndex);
             });
 
-            // Update steps
+
             steps.forEach((step, index) => {
                 step.classList.toggle('active', index === currentSlideIndex);
             });
 
-            // Update bullets
+
             bullets.forEach((bullet, index) => {
                 bullet.classList.toggle('active', index === currentSlideIndex);
             });
+            
+
+            updateMainContent();
+        }
+
+        function updateMainContent() {
+            const activeStep = steps[currentSlideIndex];
+            if (activeStep) {
+                const stepTitle = activeStep.querySelector('.step__title');
+                const stepDescription = activeStep.querySelector('.step__description');
+                
+                if (stepTitle && stepDescription) {
+                    mainTitle.textContent = stepTitle.textContent;
+                    mainDescription.textContent = stepDescription.textContent;
+                }
+            }
         }
 
         function goToSlide(index) {
@@ -50,12 +68,10 @@
             updateSlider();
         }
 
-        // Auto-advance slider every 5 seconds
         setInterval(() => {
-            // changeSlide(1);
+
         }, 5000);
 
-        // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') {
                 changeSlide(-1);
@@ -64,5 +80,4 @@
             }
         });
 
-        // Initialize
         updateSlider();
