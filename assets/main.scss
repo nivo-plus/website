@@ -1127,6 +1127,33 @@ footer {
       }
     }
   }
+
+    .privacy__overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            background: var(--modal__overlay-bg);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 2;
+    }
+
+    .privacy--active {
+        .modal__content {
+        opacity: 1;
+        visibility: visible;
+        box-sizing: border-box;
+        }
+        
+        .modal__body {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
   
 
 @media (min-width: 769px) {
