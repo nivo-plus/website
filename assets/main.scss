@@ -949,7 +949,7 @@ html {
     }
 
     // Zoom
-    .zoom-modal {
+   .zoom-modal {
         display: none;
         position: fixed;
         z-index: 1000;
@@ -961,7 +961,7 @@ html {
         background-color: rgba(0, 0, 0, 0.9);
         opacity: 0;
         transition: opacity 0.3s ease;
-    }
+        }
 
     .zoom-modal.active {
         display: flex;
@@ -987,6 +987,18 @@ html {
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
         transition: transform 0.3s ease;
         cursor: zoom-in;
+        transform-origin: center center;
+        
+        // Zoom states
+        &.zoomed-in {
+            transform: scale(2);
+            cursor: zoom-out;
+        }
+        
+        &.zoomed-out {
+            transform: scale(1);
+            cursor: zoom-in;
+        }
     }
 
 // Footer
