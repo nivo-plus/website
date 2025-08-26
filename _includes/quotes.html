@@ -10,39 +10,41 @@
         <button class="carousel-nav prev fa fa-chevron-left" onclick="moveCarousel(-1)"></button>
         <div class="carousel">
             <div class="carousel-wrapper" id="carouselWrapper">
-                <!-- Card 1 -->
+                <div class="card--quote">
+                    <p class="testimonial-quote">
+                        "Con NIVO+ logramos unificar toda la información del paciente durante la cirugía en un solo registro digital. La trazabilidad de los datos facilita la auditoría y mejora la seguridad del paciente de manera tangible."
+                    </p>
+                    <h4 class="testimonial-author">Dr. Degreef, Silvestre</h4>
+                    <p class="testimonial-role">Anestesiólogo - Matricula 4381<br><i>Clínica de Imágenes</i><br><b>Neuquén</b></p>
+                </div>
                 <div class="card--quote">
                     <p class="testimonial-quote">
                         "NIVO+ ha transformado nuestra práctica anestesiológica. Ahora podemos registrar todos los datos necesarios sin comprometer nuestra atención al paciente. La generación automática de informes nos ahorra horas cada día."
                     </p>
-                    <h4 class="testimonial-author">Dr. Roberto Consigli</h4>
-                    <p class="testimonial-role">Jefe de Anestesiología Leben Salud<br><b>Río Negro y Neuquén</b></p>
+                    <h4 class="testimonial-author">Dr. Salvarezza, Máximo</h4>
+                    <p class="testimonial-role">Anestesiólogo - Matrícula 3050<br><i>Fundación Médica</i><br><b>Río Negro</b></p>
                 </div>
-
-                <!-- Card 2 -->
                 <div class="card--quote active">
                     <p class="testimonial-quote">
                         "La capacidad de registrar más de 60 datos por hora en tiempo real mientras atiendo al paciente ha sido revolucionaria. Los informes generados cumplen con todos los requisitos legales y son mucho más completos."
                     </p>
-                    <h4 class="testimonial-author">Dr. Arturo Salaza</h4>
-                    <p class="testimonial-role">Anestesiólogo Hospital Notti<br><b>Mendoza</b></p>
+                    <h4 class="testimonial-author">Dr. Salassa, Arturo</h4>
+                    <p class="testimonial-role">Anestesiólogo - Matrícula 12116<br><i>Hospital Notti</i><br><b>Mendoza</b></p>
                 </div>
-
-                <!-- Card 3 -->
                 <div class="card--quote">
                     <p class="testimonial-quote">
                         "La interfaz móvil de NIVO+ me permite alternar entre dispositivos sin perder información. Los discursos automáticos para técnicas anestésicas han reducido nuestro tiempo de documentación en un 40%."
                     </p>
                     <h4 class="testimonial-author">Dr. Marcos Malesich</h4>
-                    <p class="testimonial-role">Anestesiólogo de Clínica del Valle<br><b>Chubut</b></p>
+                    <p class="testimonial-role">Anestesiólogo - Matrícula 1985<br><i>Clínica del Valle</i><br><b>Chubut</b></p>
                 </div>
             </div>
         </div>
         <button class="carousel-nav next fa fa-chevron-right" onclick="moveCarousel(1)"></button>
-
         <div class="testimonials-dots" id="dotsContainer">
             <span class="dot" onclick="goToCard(0)"></span>
             <span class="dot active" onclick="goToCard(1)"></span>
             <span class="dot" onclick="goToCard(2)"></span>
+            <span class="dot" onclick="goToCard(3)"></span>
         </div>
     </section>

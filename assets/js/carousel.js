@@ -1,5 +1,5 @@
         let currentCard = 1
-        const totalCards = 3;
+        const totalCards = 4;
         const wrapper = document.getElementById('carouselWrapper');
         const dots = document.querySelectorAll('.dot');
         const cards = document.querySelectorAll('.card--quote');
