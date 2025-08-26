@@ -939,14 +939,23 @@ html {
   transition: transform 0.3s ease;
   cursor: zoom-in;
   transform-origin: center center;
+  user-select: none;
 }
 .zoom-image.zoomed-in {
   transform: scale(2);
-  cursor: zoom-out;
+  cursor: grab;
+  transition: none;
+}
+.zoom-image.zoomed-in:active {
+  cursor: grabbing;
 }
 .zoom-image.zoomed-out {
   transform: scale(1);
   cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+.zoom-image.panning {
+  cursor: grabbing;
 }
 
 footer.container-flex {
@@ -1198,7 +1207,7 @@ footer.container-flex .section__description {
   .carousel-nav {
     display: none;
   }
-  .testimonials-dots, .carousel-nav {
+  .carousel-nav {
     display: none;
   }
   .dot {
