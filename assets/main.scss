@@ -9,7 +9,7 @@
     --panelGap: 36px;
     --cardPadding: 36px;
     --cardWidth: 320px;
-    --containerGap: 28px;
+    --containerGap: 24px;
     --containerGapRow: 16px;
     --menuWidth: 280px;
 
@@ -82,6 +82,7 @@ body {
         padding: 8px 0;
         transition: color 0.2s;
         white-space: nowrap;
+        width: fit-content;
     }
 
     .nav-link:hover {
@@ -297,6 +298,7 @@ html {
     font-weight: 500;
     text-align: center;
     text-transform: uppercase;
+    text-wrap: nowrap;
 }
 
 .btn__secondary--outline { 
@@ -849,7 +851,7 @@ html {
     }
 
     .sidebar__header {
-        padding: var(--bodyPadding) var(--cardPadding) var(--panelGap) var(--cardPadding);
+        padding: var(--cardPadding) var(--containerGap);
 
         .sidebar__title {
             font-size: var(--cardTitleSize);
@@ -858,11 +860,18 @@ html {
         }
     }
 
+    .sidebar__footer {
+        display: flex;
+        justify-content: center;
+        padding: 16px var(--containerGap) var(--cardPadding) var(--containerGap);
+    }
+
     .sidebar__stepper {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
+        // margin-bottom: 16px;
     }
 
     .sidebar__step {
@@ -876,8 +885,8 @@ html {
         height: 100%;
         border-bottom: solid 1px lightgray;
 
-        &:last-child {
-            border-bottom: none!important;
+        &:first-child {
+            border-top: solid 1px lightgray;
         }
 
         .step__description {
@@ -1328,17 +1337,15 @@ footer {
     }
         
     .container-grid {
-        padding: var(--cardPadding) 0;
+        gap: var(--containerGapRow);
         background: white;
         flex-direction: column!important;
     }
     
-    .main__content,
     .sidebar {
-        
         width: 100%;
-        height: 72px!important;
-        padding: 0 var(--cardPadding);
+        height: min-content!important;
+        padding: 0 var(--panelPadding);
         background-color: white!important;
 
         .sidebar__header {
@@ -1359,9 +1366,11 @@ footer {
                 height: -webkit-fill-available;
                 border-bottom: none!important;
                 box-sizing: border-box;
+                background-color: none!important;
 
                 &:first-child {
                     padding-left: 0!important;
+                    border-top: none!important;
                 }
 
                 &:last-child {
@@ -1369,8 +1378,13 @@ footer {
                 }
 
                 &.active {
-                    background-color: transparent!important;
+                    background: none!important;
                     border-bottom: solid 2px var(--primary);
+                    box-shadow: none!important;
+                }
+                
+                &:hover, &:active {
+                    background: none!important;
                     box-shadow: none!important;
                 }
                 
@@ -1380,7 +1394,8 @@ footer {
                     font-size: 10px;
 
                     &.active {
-                        transform: scale(.9);
+                        // transform: scale(.9);
+                        background: var(--primary);
                     }
                 }
 
@@ -1391,12 +1406,12 @@ footer {
                 }
 
                 .step__prefix {
-                    font-size: 7px!important;
+                    font-size: 8px!important;
                     margin-bottom: 2px!important;
                 }
 
                 .step__title {
-                    font-size: 11px!important;
+                    font-size: 12px!important;
                     margin-bottom: 0!important;
                     text-wrap: nowrap;
                 }
@@ -1411,10 +1426,15 @@ footer {
     }
     
     .main__content {
-        padding: 20px;
+        width: 100%;
 
         .slider-container {
-            height: 280px;
+            height: 240px;
+
+            .image-slide {
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                height: fit-content!important;
+            }
         }
 
         .fake-radio {
@@ -1442,12 +1462,18 @@ footer {
         --titleSize: 24px;
         font-size: var(--titleSize);
         text-align: center;
+        height: 60px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .hero__description, .section__description {
         --descriptionSize: 16px;
         font-size: var(--descriptionSize);
         text-align: center;
+        height: 112px;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         a {
             --descriptionSize: 16px;
@@ -1505,7 +1531,7 @@ footer {
     }
 
     .banner__container, .main__content {
-        --bodyPadding: 48px var(--cardPadding) 0px 48px;
+        --bodyPadding: var(--cardPadding) 36px  0px 36px;
         height: calc(100vh - var(--headerHeight));
         padding: var(--bodyPadding);
 
