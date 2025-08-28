@@ -1,5 +1,5 @@
 @charset "UTF-8";
-* {
+--- --- * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -1543,5 +1543,6 @@ footer.container-flex .btn__tertiary {
     opacity: 1;
   }
 }
+/* WhatsApp button test - force recompilation */
 
 /*# sourceMappingURL=main.css.map */
