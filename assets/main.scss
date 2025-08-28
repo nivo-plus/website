@@ -1,3 +1,6 @@
+---
+---
+
 * {
     margin: 0;
     padding: 0;
@@ -1551,6 +1554,48 @@ footer {
     }
 
 }
+
+// WhatsApp Floating Button - Simple & Effective
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    
+    svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 15px;
+        right: 15px;
+        
+        svg {
+            width: 26px;
+            height: 26px;
+        }
+    }
+}
     
     //  Mini-slider
     #cards-slider {
@@ -1647,3 +1692,5 @@ footer {
             opacity: 1;
         }
     }
+
+/* WhatsApp button test - force recompilation */
