@@ -1,17 +1,15 @@
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
-
-# Build settings
+title: "NIVO+ Anesthesic Digital System"
+email: nivo@cares.ar
+description: >-
+  Plataforma para la gestión integral de documentación digital anestesiológica.
+  Facilita el registro de evaluación pre anestésica, protocolo anestésico y
+  post anestesia, optimizando la práctica profesional y generando documentos de
+  alta calidad.
+baseurl: ""
+url: "https://cares.ar"
+twitter_username: ""
+github_username: ""
 plugins:
   - jekyll-feed
-
 include:
   - .well-known
