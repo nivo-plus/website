@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
     const openModalButton = document.getElementById('openModal');
     const closeModalButton = document.getElementById('closeModal');
     const modal = document.getElementById('myModal');
@@ -74,6 +75,7 @@
             privacyOverlay.style.visibility = 'hidden';
         });
     })
+});
 
     // Expand image
   function updateSlider() {
