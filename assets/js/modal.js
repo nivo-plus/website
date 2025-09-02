@@ -3,6 +3,10 @@
     const modal = document.getElementById('myModal');
     const overlay = document.querySelector('.modal__overlay');
 
+    // Check URL parameters to auto-open modals
+    const urlParams = new URLSearchParams(window.location.search);
+    const modalParam = urlParams.get('modal');
+
     if (openModalButton && closeModalButton && modal && overlay) {
         openModalButton.addEventListener('click', () => {
             modal.classList.add('modal--active');
@@ -30,6 +34,19 @@
     const privacyModal = document.getElementById('privacyModal');
     const privacyOverlay = document.querySelector('.privacy__overlay');
     const openPrivacyButtons = document.querySelectorAll('.modal--privacy');
+
+    // Auto-open modals based on URL parameter
+    if (modalParam === 'terms' && modal && overlay) {
+        modal.classList.add('modal--active');
+        document.body.style.overflow = 'hidden';
+        overlay.style.opacity = '1';
+        overlay.style.visibility = 'visible';
+    } else if (modalParam === 'privacy' && privacyModal && privacyOverlay) {
+        privacyModal.classList.add('privacy--active');
+        document.body.style.overflow = 'hidden';
+        privacyOverlay.style.opacity = '1';
+        privacyOverlay.style.visibility = 'visible';
+    }
 
     openPrivacyButtons.forEach(button => {
         button.addEventListener('click', () => {
