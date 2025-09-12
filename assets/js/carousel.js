@@ -91,7 +91,7 @@
         });
 
         function updateCarousel() {
-            const cardWidth = 320 + 20
+            const cardWidth = 320
             const targetScroll = currentCard * cardWidth;
             
             wrapper.style.transform = `translateX(-${targetScroll}px)`;

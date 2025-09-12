@@ -529,11 +529,15 @@ html {
 }
 
 .gradient-light {
+  --bodyPadding: 36px;
   background: linear-gradient(135deg, #14b8a6, #0891b2);
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   overflow-x: hidden;
   position: relative;
   height: calc(100vh - var(--headerHeight));
+  padding: var(--bodyPadding);
 }
 .gradient-light .section__badge, .gradient-light .section__title, .gradient-light .section__description {
   color: white;
@@ -1317,7 +1321,7 @@ footer.container-flex .btn__tertiary {
     --modal__padding: 24px;
   }
   .slider-container {
-    height: 180px !important;
+    height: 185px !important;
   }
   .section__title {
     font-size: 24px;
@@ -1341,7 +1345,8 @@ footer.container-flex .btn__tertiary {
     --descriptionSize: 16px;
     font-size: var(--descriptionSize);
     text-align: center;
-    height: 130px;
+    min-height: fit-content;
+    max-height: 130px;
     overflow: hidden;
     text-overflow: ellipsis;
   }

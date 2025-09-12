@@ -568,11 +568,15 @@ html {
 
 // Testimonials
 .gradient-light {
+    --bodyPadding: 36px;
     background: linear-gradient(135deg, #14b8a6, #0891b2);
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     overflow-x: hidden;
     position: relative;
     height: calc(100vh - var(--headerHeight));
+    padding: var(--bodyPadding);
 
     .section__badge, .section__title, .section__description {
         color: white;
@@ -1456,7 +1460,7 @@ footer {
    }
 
     .slider-container {
-        height: 180px!important;
+        height: 185px!important;
     }
    
     .section__title {
@@ -1486,7 +1490,8 @@ footer {
         --descriptionSize: 16px;
         font-size: var(--descriptionSize);
         text-align: center;
-        height: 130px;
+        min-height: fit-content;
+        max-height: 130px;
         overflow: hidden;
         text-overflow: ellipsis;
 

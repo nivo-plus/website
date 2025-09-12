@@ -1,0 +1,14 @@
+---
+layout: quote
+---
+<div class="card--quote{% if page.active %} active{% endif %}">
+    <p class="testimonial-quote">
+        "{{ content | strip }}"
+    </p>
+    <h4 class="testimonial-author">{{ page.author }}</h4>
+    <p class="testimonial-role">
+        {{ page.role }}<br>
+        <i>{{ page.clinic }}</i><br>
+        <b>{{ page.location }}</b>
+    </p>
+</div>

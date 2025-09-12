@@ -9,6 +9,10 @@ baseurl: ""
 url: "https://cares.ar"
 twitter_username: ""
 github_username: ""
+collections:
+  quotes:
+    output: false
+    sort_by: order
 plugins:
   - jekyll-feed
 include:
