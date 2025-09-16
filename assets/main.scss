@@ -142,7 +142,6 @@ body {
         color: var(--primaryDark);
         cursor: pointer;
     }
-
     
     .mobile-nav-overlay {
         position: fixed;
@@ -164,16 +163,14 @@ body {
     }
 
     .mobile-nav-panel {
+        position: absolute;
+        left: calc(100vw - (var(--menuWidth) * 2));
         background: white;
         width: var(--menuWidth);
         height: 100%;
         transform: translateX(100%);
         transition: transform 0.3s ease;
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .mobile-nav-overlay.active .mobile-nav-panel {
-        transform: translateX(calc(100vw - var(--menuWidth)));
     }
 
     .mobile-nav-menu {
@@ -194,6 +191,7 @@ body {
         text-transform: uppercase;
         font-size: 14px;
         transition: background 0.2s;
+        width: 100%;
     }
 
     .mobile-nav-menu .nav-link:hover {
@@ -208,6 +206,7 @@ body {
         border-radius: 4px;
         color: var(--primary);
         background: transparent;
+        width: auto;
     }
 
     .mobile-nav-menu .btn__secondary--outline:hover {
@@ -1257,7 +1256,7 @@ footer {
     }
 }
 
-@media (max-width: 920px) {
+@media (max-width: 980px) {
 
     .fake-radio {
         display: none;
