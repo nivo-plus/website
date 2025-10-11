@@ -7,23 +7,102 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="NIVO+, anestesiología digital, registro anestésico, software anestesia, historia clínica electrónica anestesia, documentación anestesiológica, protocolo anestésico digital, evaluación preanestésica, sistema anestésico, anestesiólogos, healthcare software, medical software Argentina">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+    <meta name="revisit-after" content="7 days">
+
+    {% if page.excerpt %}
+    <meta name="description" content="{{ page.excerpt| strip_html }}" />
+    {% else %}
+    <meta name="description" content="NIVO+ es el sistema digital líder para registro anestesiológico completo. Software especializado para anestesiólogos que facilita evaluación preanestésica, protocolo anestésico y documentación post anestesia.">
+    {% endif %}
+
+    <meta name="author" content="{{ site.name }}" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:site_name" content="NIVO+ Anesthesic Digital System">
+    {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}" />
+    {% else %}
+    <meta property="og:title" content="NIVO+ | Registro Anestesiológico Digital Completo" />
+    {% endif %}
+    {% if page.excerpt %}
+    <meta property="og:description" content="{{ page.excerpt| strip_html }}" />
+    {% else %}
+    <meta property="og:description" content="NIVO+ es el sistema digital líder para registro anestesiológico completo. Software especializado para anestesiólogos." />
+    {% endif %}
+    <meta property="og:image" content="{{ site.url }}/assets/img/nv_logo.svg">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+    {% if page.title %}
+    <meta property="twitter:title" content="{{ page.title }}" />
+    {% else %}
+    <meta property="twitter:title" content="NIVO+ | Registro Anestesiológico Digital" />
+    {% endif %}
+    {% if page.excerpt %}
+    <meta property="twitter:description" content="{{ page.excerpt| strip_html }}" />
+    {% else %}
+    <meta property="twitter:description" content="Sistema digital para registro anestesiológico completo. Software especializado para anestesiólogos." />
+    {% endif %}
+    <meta property="twitter:image" content="{{ site.url }}/assets/img/nv_logo.svg">
+
+    <!-- Schema.org markup -->
+    <meta itemprop="name" content="NIVO+ | Sistema Anestésico Digital">
+    <meta itemprop="description" content="Plataforma digital para gestión integral de documentación anestesiológica">
+    <meta itemprop="image" content="{{ site.url }}/assets/img/nv_logo.svg">
+
     <link rel="stylesheet" href="./assets/main.css" />
     <link rel="stylesheet" href="./assets/icons.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
-    {% if page.excerpt %}
-    <meta name="description" content="{{ page.excerpt| strip_html }}" />
-    <meta property="og:description" content="{{ page.excerpt| strip_html }}" />
-    {% else %}
-    <meta name="description" content="{{ site.description }}">
-    <meta property="og:description" content="{{ site.description }}" />
-    {% endif %}
-    <meta name="author" content="{{ site.name }}" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
-    {% if page.title %}
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta property="twitter:title" content="{{ page.title }}" />
-    {% endif %}
-
-    <meta itemprop="name" content="NIVO+ | Healthcare systems">
-    <meta itemprop="description" content="Sitio oficial de NIVO+ Healthcare systems">
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "NIVO+",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web-based",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "ARS"
+      },
+      "description": "NIVO+ es el sistema digital líder para registro anestesiológico completo. Software especializado para anestesiólogos que facilita evaluación preanestésica, protocolo anestésico y documentación post anestesia.",
+      "url": "{{ site.url }}",
+      "image": "{{ site.url }}/assets/img/nv_logo.svg",
+      "provider": {
+        "@type": "Organization",
+        "name": "NIVO+ Healthcare Systems",
+        "url": "{{ site.url }}",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+54-299-530-3855",
+          "contactType": "Sales",
+          "areaServed": "AR",
+          "availableLanguage": "Spanish"
+        }
+      },
+      "featureList": [
+        "Registro de evaluación preanestésica",
+        "Protocolo anestésico digital",
+        "Documentación post anestesia",
+        "Integración con Historia Clínica Electrónica",
+        "Generación de documentos de alta calidad"
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Anestesiólogos"
+      }
+    }
+    </script>
