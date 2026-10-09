@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "ClaudeInChromeDomain(127.0.0.1:4000)",
+      "ClaudeInChromeDomain(sychus.github.io)"
+    ]
+  }
+}

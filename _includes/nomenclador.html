@@ -1,0 +1,53 @@
+<section class="section section--bg nomen-section">
+    <div class="container nomen-section__inner">
+        <div class="nomen-section__copy" data-reveal>
+            <p class="eyebrow">Nomenclador</p>
+            <h2 class="section__title">El nomenclador de su organización, dentro del protocolo</h2>
+            <p class="section__description">Busque prácticas por código o descripción y regístrelas con su complejidad sin salir del registro. Las prácticas nomencladas se incluyen en el informe en PDF y viajan al sistema de facturación.</p>
+
+            <ul class="nomen-features">
+                <li>
+                    <span class="bento__icon" aria-hidden="true"><i class="ph ph-magnifying-glass"></i></span>
+                    <span><strong>Búsqueda por código o descripción</strong>Desde 3 caracteres, con o sin puntos: 010703 encuentra 01.07.03.</span>
+                </li>
+                <li>
+                    <span class="bento__icon" aria-hidden="true"><i class="ph ph-buildings"></i></span>
+                    <span><strong>Catálogo propio de cada organización</strong>Se carga desde el nomenclador de la organización y se versiona, sin perder las ediciones anteriores.</span>
+                </li>
+                <li>
+                    <span class="bento__icon" aria-hidden="true"><i class="ph ph-map-pin"></i></span>
+                    <span><strong>Compatible con el NAM</strong>Nomenclador Anestesiológico de Mendoza, con más de 2.300 prácticas.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nomen" data-nomen data-reveal style="--d: 100ms">
+            <div class="panel__head">
+                <span class="panel__title"><i class="ph ph-list-magnifying-glass" aria-hidden="true"></i>Prácticas nomencladas</span>
+                <span class="panel__badge">NAM · Mendoza</span>
+            </div>
+
+            <div class="nomen__search">
+                <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+                <input type="search" class="nomen__input" data-nomen-input
+                    placeholder="Buscar prácticas nomencladas (mín. 3 caracteres)"
+                    aria-label="Buscar prácticas nomencladas" autocomplete="off" spellcheck="false"
+                    role="combobox" aria-expanded="false" aria-controls="nomenResults">
+                <ul class="nomen__results" id="nomenResults" role="listbox" data-nomen-results></ul>
+            </div>
+
+            <div class="nomen__table-wrap">
+                <table class="nomen__table">
+                    <thead>
+                        <tr><th>Código</th><th>Práctica</th><th>Compl.</th><th>%</th><th><span class="sr-only">Acciones</span></th></tr>
+                    </thead>
+                    <tbody data-nomen-rows>
+                        <tr class="nomen__empty"><td colspan="5">No hay prácticas nomencladas</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="nomen__note"><i class="ph ph-info" aria-hidden="true"></i>Pruebe la búsqueda con una muestra de prácticas del NAM.</p>
+        </div>
+    </div>
+</section>

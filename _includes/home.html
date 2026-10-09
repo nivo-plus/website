@@ -16,22 +16,32 @@
             </div>
 
             <div class="hero__visual">
-                <div class="vitals" role="img" aria-label="Simulación del registro de signos vitales en NIVO+: presión arterial sistólica, diastólica, media y frecuencia cardíaca cargándose cada 5 minutos">
-                    <div class="vitals__head">
-                        <span class="vitals__title"><span class="pulse"></span>Protocolo anestésico</span>
-                        <span class="vitals__clock" data-vitals-clock>12:00</span>
+                <div class="timeline" data-timeline role="img" aria-label="Simulación de un acto anestésico registrado en NIVO+: del ingreso a quirófano al egreso, con signos vitales del monitor, discurso automático y envío a facturación">
+                    <div class="timeline__head">
+                        <span class="timeline__title">Acto anestésico</span>
+                        <span class="timeline__live" data-timeline-status><span class="pulse"></span>En curso</span>
+                        <span class="timeline__clock" data-timeline-clock>11:55</span>
                     </div>
-                    <div class="vitals__readouts">
-                        <div class="vitals__readout vitals__readout--pas"><span class="vitals__label"><span class="vitals__mark">△</span>PAS</span><span class="vitals__value" data-vitals-value="pas">128</span></div>
-                        <div class="vitals__readout vitals__readout--pad"><span class="vitals__label"><span class="vitals__mark">◇</span>PAD</span><span class="vitals__value" data-vitals-value="pad">72</span></div>
-                        <div class="vitals__readout vitals__readout--pam"><span class="vitals__label"><span class="vitals__mark">✱</span>PAM</span><span class="vitals__value" data-vitals-value="pam">91</span></div>
-                        <div class="vitals__readout vitals__readout--fc"><span class="vitals__label"><span class="vitals__mark">○</span>FC</span><span class="vitals__value" data-vitals-value="fc">68</span></div>
+
+                    <div class="timeline__track">
+                        <div class="timeline__rail"><span class="timeline__fill" data-timeline-fill></span></div>
+                        <ol class="timeline__steps">
+                            <li data-at="0"><span class="timeline__dot"></span><span class="timeline__label">Ingreso</span><span class="timeline__time">12:00</span></li>
+                            <li data-at="10"><span class="timeline__dot"></span><span class="timeline__label">Anestesia</span><span class="timeline__time">12:10</span></li>
+                            <li data-at="20"><span class="timeline__dot"></span><span class="timeline__label">Cirugía</span><span class="timeline__time">12:20</span></li>
+                            <li data-at="95"><span class="timeline__dot"></span><span class="timeline__label">Fin cirugía</span><span class="timeline__time">13:35</span></li>
+                            <li data-at="105"><span class="timeline__dot"></span><span class="timeline__label">Fin anestesia</span><span class="timeline__time">13:45</span></li>
+                            <li data-at="115"><span class="timeline__dot"></span><span class="timeline__label">Egreso</span><span class="timeline__time">13:55</span></li>
+                        </ol>
                     </div>
-                    <svg class="vitals__chart" viewBox="0 0 600 280" aria-hidden="true" data-vitals-chart></svg>
-                    <div class="vitals__foot">
-                        <span>Datos registrados <strong data-vitals-count>0</strong></span>
-                        <span class="vitals__status"><i class="ph ph-check-circle" aria-hidden="true"></i>Discurso automático actualizado</span>
-                    </div>
+
+                    <ul class="timeline__events">
+                        <li data-on="-5"><span class="timeline__icon"><i class="ph ph-clipboard-text"></i></span>Evaluación preanestésica completa</li>
+                        <li data-on="0"><span class="timeline__icon"><i class="ph ph-plugs-connected"></i></span>Monitor conectado · Quirófano 1</li>
+                        <li data-on="10"><span class="timeline__icon"><i class="ph ph-heartbeat"></i></span>Signos vitales registrados<strong class="timeline__count" data-timeline-count>0</strong></li>
+                        <li data-on="105"><span class="timeline__icon"><i class="ph ph-file-text"></i></span>Discurso automático generado</li>
+                        <li data-on="115"><span class="timeline__icon"><i class="ph ph-receipt"></i></span>Protocolo enviado a facturación</li>
+                    </ul>
                 </div>
             </div>
         </div>
