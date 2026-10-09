@@ -1,67 +1,181 @@
-<div id="" class="container-grid">
-    <div class="main__content">
-        <div class="section__badge">La Solución</div>
-        <h1 class="section__title" id="main-title">Evaluación Pre anestésica</h1>
-        <p class="section__description" id="main-description">
-            NIVO+ cubre todo el proceso anestésico, desde la evaluación inicial hasta el alta del paciente.
-        </p>
-        
-        <fig class="slider-container">
-            <img class="image-slide active" src="./assets/img/nv_screen-01.jpg" alt="Evaluación Pre anestésica">
-            <img class="image-slide" src="./assets/img/nv_screen-02.jpg" alt="Protocolo anestésico">
-            <img class="image-slide" src="./assets/img/nv_screen-03.jpg" alt="Recuperación postanestésica">
-        </fig>
-        <figcaption><i class="fa fa-search-plus"></i>Presionar la imagen para agrandar</figcaption>
+<section class="story section--surface" data-story>
+    <div class="container">
+        <header class="section__header story__header" data-reveal>
+            <p class="eyebrow">La solución</p>
+            <h2 class="section__title">Del ingreso al alta, en un solo flujo</h2>
+            <p class="section__description">NIVO+ cubre todo el proceso anestésico, desde la evaluación inicial hasta el alta del paciente.</p>
+        </header>
+    </div>
 
-        <div id="zoom-modal" class="zoom-modal">
-            <button size="md" class="fab__neutral--outline" id="zoomClose">&times;</button>
-            <img class="zoom-image" src="" alt="Zoomed image">
-        </div>
+    <div class="story__track" data-story-track>
+        <div class="story__sticky">
+            <div class="container story__layout">
+                <div class="story__side">
+                    <ol class="story__nav" aria-label="Etapas">
+                        <li><button type="button" class="story__nav-item is-active" data-story-goto="0"><span class="story__nav-num">01</span><span class="story__nav-label">Pre</span><span class="story__nav-bar"><span></span></span></button></li>
+                        <li><button type="button" class="story__nav-item" data-story-goto="1"><span class="story__nav-num">02</span><span class="story__nav-label">Intra</span><span class="story__nav-bar"><span></span></span></button></li>
+                        <li><button type="button" class="story__nav-item" data-story-goto="2"><span class="story__nav-num">03</span><span class="story__nav-label">Post</span><span class="story__nav-bar"><span></span></span></button></li>
+                        <li><button type="button" class="story__nav-item" data-story-goto="3"><span class="story__nav-num">04</span><span class="story__nav-label">Informe</span><span class="story__nav-bar"><span></span></span></button></li>
+                        <li><button type="button" class="story__nav-item" data-story-goto="4"><span class="story__nav-num">05</span><span class="story__nav-label">Facturación</span><span class="story__nav-bar"><span></span></span></button></li>
+                    </ol>
 
-        <div class="fake-radio">
-            <label class="radio-btn active" onclick="goToSlide(0)"></label>
-            <label class="radio-btn" onclick="goToSlide(1)"></label>
-            <label class="radio-btn" onclick="goToSlide(2)"></label>
+                    <div class="story__copy">
+                        <article class="story__text is-active" data-story-text="0">
+                            <h3 class="story__title">Evaluación preanestésica</h3>
+                            <p>Registro de antecedentes alérgicos, clínicos y quirúrgicos, examen físico, estudios complementarios y evaluación integral del riesgo anestésico.</p>
+                            <button type="button" class="btn btn--outline" data-zoom="./assets/img/nv_screen-01.jpg" data-zoom-alt="Pantalla de evaluación preanestésica en NIVO+"><i class="ph ph-magnifying-glass-plus" aria-hidden="true"></i>Ver pantalla real</button>
+                        </article>
+                        <article class="story__text" data-story-text="1">
+                            <h3 class="story__title">Protocolo anestésico</h3>
+                            <p>Documentación de condiciones de ingreso, monitoreo empleado, técnicas anestésicas e invasivas, ventilación, fármacos administrados y condiciones de egreso.</p>
+                            <p class="story__note"><i class="ph ph-plugs-connected" aria-hidden="true"></i>Con monitores multiparamétricos Mindray y Dräger, los signos vitales se importan al gráfico y la tabla, sin pisar lo que usted ya cargó.</p>
+                            <button type="button" class="btn btn--outline" data-zoom="./assets/img/nv_screen-02.jpg" data-zoom-alt="Pantalla de protocolo anestésico con gráfico de signos vitales en NIVO+"><i class="ph ph-magnifying-glass-plus" aria-hidden="true"></i>Ver pantalla real</button>
+                        </article>
+                        <article class="story__text" data-story-text="2">
+                            <h3 class="story__title">Recuperación postanestésica</h3>
+                            <p>Registro de signos vitales en recuperación, evaluación del dolor, detección de complicaciones y verificación de condiciones necesarias para el egreso.</p>
+                            <button type="button" class="btn btn--outline" data-zoom="./assets/img/nv_screen-03.jpg" data-zoom-alt="Pantalla de recuperación postanestésica en NIVO+"><i class="ph ph-magnifying-glass-plus" aria-hidden="true"></i>Ver pantalla real</button>
+                        </article>
+                        <article class="story__text" data-story-text="3">
+                            <h3 class="story__title">Informe automático</h3>
+                            <p>Al cerrar el registro, NIVO+ genera el informe en PDF con discursos automáticos en 12 secciones, listo para la historia clínica.</p>
+                            <a href="./assets/docs/informe-modelo.pdf" target="_blank" rel="noopener" class="btn btn--primary"><i class="ph ph-download-simple" aria-hidden="true"></i>Descargar informe modelo</a>
+                        </article>
+                        <article class="story__text" data-story-text="4">
+                            <h3 class="story__title">Envío a facturación</h3>
+                            <p>Con un clic, el protocolo finalizado viaja al sistema de facturación de su institución, con las prácticas nomencladas, los tiempos quirúrgicos, la matrícula, la cobertura del paciente y el PDF.</p>
+                            <a href="#contacto" class="btn btn--primary">Programar una demo<i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="story__stage" aria-hidden="true">
+                    <!-- 1. Pre -->
+                    <div class="story__scene is-active" data-story-scene="0">
+                        <div class="panel">
+                            <div class="panel__head">
+                                <span class="panel__title"><i class="ph ph-clipboard-text"></i>Evaluación preanestésica</span>
+                                <span class="panel__badge" data-story-pre-count>0 / 6</span>
+                            </div>
+                            <ul class="checklist" data-story-checklist="pre">
+                                <li><span class="checklist__icon"><i class="ph ph-check"></i></span>Antecedentes alérgicos<span class="checklist__state">Completo</span></li>
+                                <li><span class="checklist__icon"><i class="ph ph-check"></i></span>Antecedentes clínicos<span class="checklist__state">Completo</span></li>
+                                <li><span class="checklist__icon"><i class="ph ph-check"></i></span>Antecedentes quirúrgicos<span class="checklist__state">Completo</span></li>
+                                <li><span class="checklist__icon"><i class="ph ph-check"></i></span>Examen físico<span class="checklist__state">Completo</span></li>
+                                <li><span class="checklist__icon"><i class="ph ph-check"></i></span>Estudios complementarios<span class="checklist__state">Completo</span></li>
+                                <li><span class="checklist__icon"><i class="ph ph-check"></i></span>Riesgo anestésico<span class="checklist__state">Evaluado</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 2. Intra -->
+                    <div class="story__scene" data-story-scene="1">
+                        <div class="vitals vitals--flat">
+                            <div class="vitals__head">
+                                <span class="vitals__title"><span class="pulse"></span>Protocolo anestésico</span>
+                                <span class="vitals__source"><i class="ph ph-plugs-connected"></i>Monitor · Quirófano 1</span>
+                                <span class="vitals__clock" data-story-clock>12:00</span>
+                            </div>
+                            <div class="vitals__readouts">
+                                <div class="vitals__readout vitals__readout--pas"><span class="vitals__label"><span class="vitals__mark">△</span>PAS</span><span class="vitals__value" data-story-value="pas">—</span></div>
+                                <div class="vitals__readout vitals__readout--pad"><span class="vitals__label"><span class="vitals__mark">◇</span>PAD</span><span class="vitals__value" data-story-value="pad">—</span></div>
+                                <div class="vitals__readout vitals__readout--pam"><span class="vitals__label"><span class="vitals__mark">✱</span>PAM</span><span class="vitals__value" data-story-value="pam">—</span></div>
+                                <div class="vitals__readout vitals__readout--fc"><span class="vitals__label"><span class="vitals__mark">○</span>FC</span><span class="vitals__value" data-story-value="fc">—</span></div>
+                            </div>
+                            <svg class="vitals__chart" viewBox="0 0 600 280" data-story-chart></svg>
+                            <div class="vitals__table">
+                                <span>SpO₂ <strong data-story-table="spo2">—</strong></span>
+                                <span>EtCO₂ <strong data-story-table="etco2">—</strong></span>
+                                <span>PVC <strong data-story-table="pvc">—</strong></span>
+                                <span>Temp. <strong data-story-table="temp">—</strong></span>
+                            </div>
+                            <div class="vitals__toast" data-story-toast>
+                                <i class="ph ph-check-circle"></i>
+                                <span><strong>Signos vitales cargados</strong> Se encontraron <b data-story-found>0</b> registros para el rango seleccionado.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Post -->
+                    <div class="story__scene" data-story-scene="2">
+                        <div class="panel">
+                            <div class="panel__head">
+                                <span class="panel__title"><i class="ph ph-bed"></i>Recuperación postanestésica</span>
+                                <span class="panel__badge" data-story-discharge>En observación</span>
+                            </div>
+                            <div class="pain">
+                                <div class="pain__head">
+                                    <span>Evaluación del dolor (EVA)</span>
+                                    <strong data-story-pain>7</strong>
+                                </div>
+                                <div class="pain__scale">
+                                    <span class="pain__marker" data-story-pain-marker></span>
+                                </div>
+                                <div class="pain__labels"><span>0</span><span>5</span><span>10</span></div>
+                            </div>
+                            <ul class="checklist" data-story-checklist="post">
+                                <li><span class="checklist__icon"><i class="ph ph-check"></i></span>Signos vitales en recuperación<span class="checklist__state">Estables</span></li>
+                                <li><span class="checklist__icon"><i class="ph ph-check"></i></span>Detección de complicaciones<span class="checklist__state">Sin eventos</span></li>
+                                <li><span class="checklist__icon"><i class="ph ph-check"></i></span>Condiciones de egreso<span class="checklist__state">Verificadas</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 4. Informe -->
+                    <div class="story__scene" data-story-scene="3">
+                        <div class="doc">
+                            <div class="doc__head">
+                                <img src="./assets/img/nv_logo-h.png" alt="" width="92" height="24">
+                                <span class="panel__badge" data-story-pdf>Generando…</span>
+                            </div>
+                            <p class="doc__title">Protocolo anestésico</p>
+                            <div class="doc__grid">
+                                <span></span><span></span><span></span>
+                                <span></span><span></span><span></span>
+                            </div>
+                            <p class="doc__label">Discurso automático</p>
+                            <p class="doc__text"><span data-story-typed></span><span class="doc__caret"></span></p>
+                            <div class="doc__sections" data-story-sections>
+                                <span>Ingreso</span><span>Monitoreo</span><span>Técnica</span><span>Ventilación</span><span>Fármacos</span><span>Egreso</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Facturación -->
+                    <div class="story__scene" data-story-scene="4">
+                        <div class="panel">
+                            <div class="panel__head">
+                                <span class="panel__title"><i class="ph ph-receipt"></i>Envío a facturación</span>
+                                <span class="panel__badge" data-story-billing>Preparando</span>
+                            </div>
+                            <div class="sync">
+                                <div class="sync__node">
+                                    <span class="sync__icon sync__icon--brand"><img src="./assets/img/nv_logo-w.png" alt="" width="28" height="25"></span>
+                                    <span>NIVO+</span>
+                                </div>
+                                <div class="sync__wire">
+                                    <span class="sync__fill" data-story-sync></span>
+                                    <span class="sync__packet" data-story-packet><i class="ph ph-file-text"></i></span>
+                                </div>
+                                <div class="sync__node">
+                                    <span class="sync__icon" data-story-target><i class="ph ph-receipt"></i></span>
+                                    <span>Facturación</span>
+                                </div>
+                            </div>
+                            <ul class="checklist" data-story-checklist="billing">
+                                <li><span class="checklist__icon"><i class="ph ph-check"></i></span>Prácticas nomencladas<span class="checklist__state">Código y complejidad</span></li>
+                                <li><span class="checklist__icon"><i class="ph ph-check"></i></span>Tiempos quirúrgicos<span class="checklist__state">Registrados</span></li>
+                                <li><span class="checklist__icon"><i class="ph ph-check"></i></span>Protocolo en PDF<span class="checklist__state">Adjunto</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <header class="sidebar__header">
-            <h2 class="sidebar__title">Solución integral</h2>
-        </header>
-        <section class="sidebar__stepper">
-            <div class="sidebar__step active" onclick="goToSlide(0)">
-                <div class="step__bullet">1</div>
-                <div class="step-content">
-                    <div class="step__prefix">PASO 1</div>
-                    <div class="step__title">Evaluación Pre anestésica</div>
-                    <p class="step__description">Registro de antecedentes alérgicos, clínicos y quirúrgicos, examen físico, estudios complementarios y evaluación integral del riesgo anestésico.</p>
-                </div>
-            </div>
-            
-            <div class="sidebar__step" onclick="goToSlide(1)">
-                <div class="step__bullet">2</div>
-                <div class="step-content">
-                    <div class="step__prefix">PASO 2</div>
-                    <div class="step__title">Protocolo anestésico</div>
-                    <p class="step__description">Documentación de condiciones de ingreso, monitoreo empleado, técnicas anestésicas e invasivas, ventilación, fármacos administrados y condiciones de egreso.</p>
-                </div>
-            </div>
-            
-            <div class="sidebar__step" onclick="goToSlide(2)">
-                <div class="step__bullet">3</div>
-                <div class="step-content">
-                    <div class="step__prefix">PASO 3</div>
-                    <div class="step__title">Recuperación postanestésica</div>
-                    <p class="step__description">Registro de signos vitales en recuperación, evaluación del dolor, detección de complicaciones y verificación de condiciones necesarias para el egreso.</p>
-                </div>
-            </div>
-        </section>
-        <footer class="sidebar__footer">
-            <a href="./assets/docs/informe-modelo.pdf" target="_blank" class="btn__primary">
-                Descargar informe modelo
-            </a>
-        </footer>
-    </aside>
-</div>
+    <div id="zoom-modal" class="zoom-modal">
+        <button type="button" class="fab__neutral--outline" id="zoomClose" aria-label="Cerrar">&times;</button>
+        <img class="zoom-image" src="" alt="Captura ampliada de NIVO+">
+    </div>
+</section>

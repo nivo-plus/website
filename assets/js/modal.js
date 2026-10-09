@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
             overlay.style.opacity = '0';
             overlay.style.visibility = 'hidden';
         });
-            overlay.addEventListener('click', () => {
+            overlay.addEventListener('click', (e) => {
+            if (e.target !== overlay) return;
             modal.classList.remove('modal--active');
             document.body.style.overflow = '';  
             overlay.style.opacity = '0';
@@ -68,7 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
             privacyOverlay.style.visibility = 'hidden';
         });
         
-        privacyOverlay.addEventListener('click', () => {   
+        privacyOverlay.addEventListener('click', (e) => {
+            if (e.target !== privacyOverlay) return;
             privacyModal.classList.remove('privacy--active');
             document.body.style.overflow = '';  
             privacyOverlay.style.opacity = '0';
@@ -78,29 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
     // Expand image
-  function updateSlider() {
-    slides.forEach((slide, index) => {
-        slide.classList.toggle('active', index === currentSlideIndex);
-        if (index === currentSlideIndex) {
-        slide.classList.add('fading');
-        setTimeout(() => slide.classList.remove('fading'), 800);
-        slide.style.pointerEvents = "auto";
-        } else {
-        slide.style.pointerEvents = "none";
-        }
-    });
-    btns.forEach((btn, index) => {
-        btn.classList.toggle('active', index === currentSlideIndex);
-    });
-    steps.forEach((step, index) => {
-        step.classList.toggle('active', index === currentSlideIndex);
-    });
-    bullets.forEach((bullet, index) => {
-        bullet.classList.toggle('active', index === currentSlideIndex);
-    });
-    updateMainContent();
-    }
-
   const zoomModal = document.getElementById('zoom-modal');
   const zoomImage = zoomModal.querySelector('.zoom-image');
   const zoomClose = document.getElementById('zoomClose');
@@ -111,17 +90,16 @@ document.addEventListener('DOMContentLoaded', function() {
   let panX = 0;
   let panY = 0;
 
-  // Open modal functionality
-  slides.forEach(slide => {
-    slide.addEventListener('click', () => {
-      if (slide.classList.contains('active')) {
-        zoomImage.src = slide.src;
-        zoomModal.classList.add('active');
-        // Reset zoom state when opening modal
-        isZoomed = false;
-        zoomImage.classList.remove('zoomed-in');
-        zoomImage.classList.add('zoomed-out');
-      }
+  // Open modal functionality: any [data-zoom] trigger opens its screenshot
+  document.querySelectorAll('[data-zoom]').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      zoomImage.src = trigger.dataset.zoom;
+      zoomImage.alt = trigger.dataset.zoomAlt || '';
+      zoomModal.classList.add('active');
+      // Reset zoom state when opening modal
+      isZoomed = false;
+      zoomImage.classList.remove('zoomed-in');
+      zoomImage.classList.add('zoomed-out');
     });
   });
 

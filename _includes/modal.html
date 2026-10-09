@@ -1,7 +1,7 @@
 <div class="modal__content">
 <header class="modal__header">
     <h1 class="modal__title">Términos y Condiciones de Uso de la Aplicación NIVO+ Anesthesic Digital System</h1>
-    <button size="md" class="btn__primary--outline" id="closeModal">&times;</button>
+    <button type="button" class="btn__primary--outline" id="closeModal" aria-label="Cerrar">&times;</button>
 </header>
 <div class="modal__body">
     <div>
@@ -30,15 +30,12 @@
     <p>Este consentimiento debe especificar que la información será <i>anonimizada</i> y se utilizará únicamente para la gestión y análisis de la actividad del colectivo anestesiológico, con fines de investigación y mejora de la práctica médica. Puede encontrar modelos de consentimiento informado para pacientes adultos y pediátricos que incluyen la autorización de datos personales en el siguiente link:   </p>
 
         <nav class="container-flex">
-            <button class="btn__secondary--outline">
-                <i class="fa fa-file-word fa-2x"></i><a href="./assets/docs/nivo-consentimiento-adultos.docx" target="_blank" class="btn__tertiary--link">Descargar consentimiento adultos
-                </a>
-            </button>
-            <button class="btn__secondary--outline">
-                <i class="fa fa-file-word fa-2x"></i>        
-                <a href="./assets/docs/nivo-consentimiento-pediatricos.docx" target="_blank" class="btn__tertiary--link">Descargar consentimiento pediatricos
-                </a>
-            </button>
+            <a href="./assets/docs/nivo-consentimiento-adultos.docx" download class="btn__secondary--outline">
+                <i class="ph ph-file-doc" aria-hidden="true"></i>Descargar consentimiento adultos
+            </a>
+            <a href="./assets/docs/nivo-consentimiento-pediatricos.docx" download class="btn__secondary--outline">
+                <i class="ph ph-file-doc" aria-hidden="true"></i>Descargar consentimiento pediátricos
+            </a>
         </nav>
 
     <div>
@@ -49,8 +46,8 @@
     <p>Puede acceder a nuestra política de privacidad de datos personales mediante el siguiente link:
 
         <nav class="container-flex">
-            <button class="btn__secondary--outline modal--privacy">
-                <i class="fa fa-user-shield fa-1x"></i>
+            <button type="button" class="btn__secondary--outline modal--privacy">
+                <i class="ph ph-shield-check" aria-hidden="true"></i>
                 Ver política de privacidad        
             </button>
         </nav>

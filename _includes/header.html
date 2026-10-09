@@ -1,51 +1,39 @@
-    <nav class="navbar">
-        <a href="#inicio">
-            <img src="./assets/img/nv_logo-h.png" alt="Logo" width="160">
+    <nav class="navbar" aria-label="Principal">
+        <a href="#inicio" class="navbar__logo">
+            <img src="./assets/img/nv_logo-h.png" alt="NIVO+" width="115" height="30">
         </a>
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="#inicio" class="nav-link dropdown-arrow">Inicio</a>
+                <a href="#desafio" class="nav-link">El desafío</a>
             </li>
             <li class="nav-item">
-                <a href="#desafio" class="nav-link dropdown-arrow">El desafío</a>
+                <a href="#portabilidad" class="nav-link">Enfoque</a>
             </li>
             <li class="nav-item">
-                <a href="#portabilidad" class="nav-link dropdown-arrow">Enfoque</a>
+                <a href="#solucion" class="nav-link">Nuestra solución</a>
             </li>
             <li class="nav-item">
-                <a href="#solucion" class="nav-link dropdown-arrow">Nuestra solución</a>
+                <a href="#testimoniales" class="nav-link">Testimonios</a>
             </li>
             <li class="nav-item">
-                <a href="#testimoniales" class="nav-link dropdown-arrow">Testimonios</a>
-            </li>
-            <li class="nav-item">
-                <a href="#contacto" class="btn__secondary--outline">Contacto</a>
+                <a href="#contacto" class="btn btn--primary btn--sm">Programar una demo</a>
             </li>
         </ul>
-        <button class="menu-toggle" id="menuToggle">☰</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNavOverlay">
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
     <div class="mobile-nav-overlay" id="mobileNavOverlay">
         <div class="mobile-nav-panel">
             <ul class="mobile-nav-menu">
-                <li class="nav-item">
-                    <a href="#inicio" class="nav-link dropdown-arrow">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#desafio" class="nav-link dropdown-arrow">El desafío</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#portabilidad" class="nav-link dropdown-arrow">Enfoque</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#solucion" class="nav-link dropdown-arrow">Nuestra solución</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#testimoniales" class="nav-link dropdown-arrow">Testimonios</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contacto" class="btn__secondary--outline">Contacto</a>
-                </li>
+                <li><a href="#inicio" class="mobile-nav-link">Inicio</a></li>
+                <li><a href="#desafio" class="mobile-nav-link">El desafío</a></li>
+                <li><a href="#portabilidad" class="mobile-nav-link">Enfoque</a></li>
+                <li><a href="#solucion" class="mobile-nav-link">Nuestra solución</a></li>
+                <li><a href="#testimoniales" class="mobile-nav-link">Testimonios</a></li>
+                <li><a href="#contacto" class="btn btn--primary mobile-nav-link-cta">Programar una demo</a></li>
             </ul>
         </div>
     </div>

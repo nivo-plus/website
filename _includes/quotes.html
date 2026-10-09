@@ -1,34 +1,54 @@
-<!-- Testimonials Section -->
-<section class="gradient-light">
-    <header class="section__header">
-        <div class="section__badge">Testimonios</div>
-        <h1 class="section__title">Qué dicen nuestros usuarios</h1>
-        <p class="section__description">Mira lo que nuestros clientes dicen sobre cómo NIVO+ ha transformado su flujo de trabajo.</p>
-    </header>   
+{% assign quotes = site.quotes | sort: 'order' %}
+<section class="section section--bg reco">
+    <div class="container">
+        <header class="section__header" data-reveal>
+            <p class="eyebrow">Testimonios</p>
+            <h2 class="section__title">Qué dicen nuestros usuarios, <span class="accent">en sus palabras</span></h2>
+            <p class="section__description">Mira lo que nuestros clientes dicen sobre cómo NIVO+ ha transformado su flujo de trabajo.</p>
+        </header>
 
-    <!-- mini-cards  -->
-    <button class="carousel-nav prev fa fa-chevron-left" onclick="moveCarousel(-1)"></button>
-    <div class="carousel">
-       <div class="carousel-wrapper" id="carouselWrapper">
-                {% assign quotes = site.quotes | sort: 'order' %}
+        {% assign first = quotes.first %}
+        {% assign first_parts = first.author | remove: "Dr. " | remove: "," | split: " " %}
+        {% assign first_hl = first.highlight | prepend: '<em>' | append: '</em>' %}
+        <figure class="reco__featured" id="recoFeatured" data-reveal>
+            <blockquote class="reco__quote" aria-live="polite">“{{ first.contenido | replace: first.highlight, first_hl }}”</blockquote>
+            <figcaption class="reco__author">
+                <span class="reco__avatar" aria-hidden="true">{{ first_parts[0] | slice: 0 }}{{ first_parts[1] | slice: 0 }}</span>
+                <span class="reco__who">
+                    <strong class="reco__name">{{ first.author }}</strong>
+                    <small class="reco__role">{{ first.role | replace: " - ", " · " }}</small>
+                    <small class="reco__place">{{ first.clinic }} · {{ first.location }}</small>
+                </span>
+            </figcaption>
+            <div class="reco__dots" role="tablist" aria-label="Elegir testimonio">
                 {% for quote in quotes %}
-                    <div class="card--quote active">
-                    <p class="testimonial-quote">"{{ quote.contenido }}"</p>
-                    <h4 class="testimonial-author">{{ quote.author }}</h4>
-                    <p class="testimonial-role">
-                        {{ quote.role }}<br>
-                        <i>{{ quote.clinic }}</i><br>
-                        <b>{{ quote.location }}</b>
-                    </p>
-                </div>
+                <button type="button" class="reco__dot{% if forloop.first %} is-active{% endif %}" data-index="{{ forloop.index0 }}" aria-label="Testimonio {{ forloop.index }}"></button>
+                {% endfor %}
+            </div>
+        </figure>
+    </div>
+
+    <div class="reco__marquee" data-reveal style="--d: 100ms">
+        <div class="reco__track">
+            {% for pass in (1..2) %}
+            <div class="reco__group"{% if pass == 2 %} aria-hidden="true"{% endif %}>
+                {% for quote in quotes %}
+                {% assign name_parts = quote.author | remove: "Dr. " | remove: "," | split: " " %}
+                {% assign hl = quote.highlight | prepend: '<em>' | append: '</em>' %}
+                <button type="button" class="reco__card{% if forloop.first and pass == 1 %} is-active{% endif %}" data-index="{{ forloop.index0 }}"{% if pass == 2 %} tabindex="-1"{% endif %}>
+                    <span class="reco__card-quote">“{{ quote.contenido | replace: quote.highlight, hl }}”</span>
+                    <span class="reco__card-footer">
+                        <span class="reco__avatar reco__avatar--sm" aria-hidden="true">{{ name_parts[0] | slice: 0 }}{{ name_parts[1] | slice: 0 }}</span>
+                        <span class="reco__who">
+                            <strong class="reco__name">{{ quote.author }}</strong>
+                            <small class="reco__role">{{ quote.role | replace: " - ", " · " }}</small>
+                            <small class="reco__place">{{ quote.clinic }} · {{ quote.location }}</small>
+                        </span>
+                    </span>
+                </button>
+                {% endfor %}
+            </div>
             {% endfor %}
         </div>
     </div>
-    <button class="carousel-nav next fa fa-chevron-right" onclick="moveCarousel(1)"></button>
-        <div class="testimonials-dots" id="dotsContainer">
-            <span class="dot" onclick="goToCard(0)"></span>
-            <span class="dot active" onclick="goToCard(1)"></span>
-            <span class="dot" onclick="goToCard(2)"></span>
-            <span class="dot" onclick="goToCard(3)"></span>
-        </div>
-    </section>
+</section>

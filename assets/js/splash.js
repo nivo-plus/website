@@ -1,32 +1,23 @@
-        window.addEventListener('load', function() {
-            const splashScreen = document.getElementById('splashScreen');
-            const mainContent = document.getElementById('mainContent');
-            
-            setTimeout(() => {
-                splashScreen.classList.add('hidden');
-                
-                setTimeout(() => {
-                    document.body.style.overflow = 'auto'; 
-                    mainContent.classList.add('visible');
-                }, 800); 
-                
-            }, 5500); 
-        });
+(function () {
+    const splashScreen = document.getElementById('splashScreen');
+    const mainContent = document.getElementById('mainContent');
+    if (!splashScreen || !mainContent) return;
 
-        document.getElementById('splashScreen').addEventListener('click', function() {
-            this.classList.add('hidden');
-            setTimeout(() => {
-                document.body.style.overflow = 'auto';
-                document.getElementById('mainContent').classList.add('visible');
-            }, 800);
-        });
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let revealed = false;
 
-        document.addEventListener('keydown', function(e) {
-            if (document.getElementById('splashScreen').classList.contains('hidden')) return;
-            
-            document.getElementById('splashScreen').classList.add('hidden');
-            setTimeout(() => {
-                document.body.style.overflow = 'auto';
-                document.getElementById('mainContent').classList.add('visible');
-            }, 800);
-        });
+    // A short brand moment, never a wall: the page is usable in under a second.
+    function reveal() {
+        if (revealed) return;
+        revealed = true;
+        splashScreen.classList.add('hidden');
+        mainContent.classList.add('visible');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(reveal, reduceMotion ? 0 : 900);
+    });
+
+    splashScreen.addEventListener('click', reveal);
+    document.addEventListener('keydown', reveal, { once: true });
+})();

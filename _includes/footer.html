@@ -1,23 +1,33 @@
-<footer class="container-flex">
-    <img src="./assets/img/nv_logo-w.png" alt="" width="75" height="66">
-    <header class="section__header">
-        <h2 class="section__title">Contacto</h2>
-            <p class="section__description">
-                Para programar una demo o realizar consultas puede contactarnos a <a class="btn__tertiary" href="mailto:nivo@cares.ar">nivo@cares.ar</a>
-            </p>
+<footer class="contact">
+    <div class="container contact__inner" data-reveal>
+        <img class="contact__logo" src="./assets/img/nv_logo-w.png" alt="" width="76" height="68">
+        <p class="eyebrow eyebrow--light">Contacto</p>
+        <h2 class="contact__title">NIVO+ lleva tus registros de anestesiología al siguiente nivel</h2>
+        <p class="contact__description">
+            Para programar una demo o realizar consultas puede contactarnos a <a href="mailto:nivo@cares.ar">nivo@cares.ar</a>
+        </p>
         <div class="btn__container">
+            <a href="mailto:nivo@cares.ar?subject=Quiero%20una%20demo%20de%20NIVO%2B" class="btn btn--light">
+                Programar una demo
+                <i class="ph ph-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="https://wa.me/5492995303855?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20NIVO+" target="_blank" rel="noopener" class="btn btn--ghost"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>Escribir por WhatsApp</a>
         </div>
-    </header>
+    </div>
+
     <script type="text/javascript" src="./assets/js/splash.js" defer></script>
     <script type="text/javascript" src="./assets/js/header.js" defer></script>
-    <script type="text/javascript" src="./assets/js/carousel.js" defer></script>
-    <script type="text/javascript" src="./assets/js/slider.js" defer></script>
     <script type="text/javascript" src="./assets/js/modal.js" defer></script>
+    <script type="text/javascript" src="./assets/js/reveal.js" defer></script>
+    <script type="text/javascript" src="./assets/js/tagline.js" defer></script>
+    <script type="text/javascript" src="./assets/js/reco.js" defer></script>
+    <script type="text/javascript" src="./assets/js/vitals.js" defer></script>
+    <script type="text/javascript" src="./assets/js/story.js" defer></script>
 </footer>
 <div class="footer--disclaimer">
-    <p><b>© 2025 NIVO+ es una marca registrada.</b> Todos los derechos reservados.</p>
-    <nav>
-        <a id="openModal">Términos y condiciones</a>
-        <a id="openPrivacy" class="modal--privacy">Política de privacidad</a>
+    <p><b>© {{ 'now' | date: "%Y" }} NIVO+ es una marca registrada.</b> Todos los derechos reservados.</p>
+    <nav aria-label="Legal">
+        <button type="button" id="openModal">Términos y condiciones</button>
+        <button type="button" id="openPrivacy" class="modal--privacy">Política de privacidad</button>
     </nav>
 </div>
